@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/size16dp"
+        android:paddingEnd="@dimen/size16dp"
+        android:paddingTop="@dimen/size80dp"
+        android:paddingBottom="@dimen/size80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorGreen"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size36sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:padding="@dimen/size16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:transitionName="poster"
+            android:id="@+id/iv_poster"
+            android:layout_width="@dimen/size150dp"
+            android:layout_height="@dimen/size225dp"
+            tools:ignore="ContentDescription" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/size16dp"
+            android:layout_toEndOf="@id/iv_poster"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@id/iv_poster"
+            android:layout_alignBottom="@id/iv_poster"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_poster" >
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:textSize="@dimen/size20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="@dimen/size16sp"
+                android:id="@+id/tv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/ivFav"
+                android:src="@drawable/ic_favorite_unselected"
+                android:padding="@dimen/size8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/favourite"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="@dimen/size16sp"
+        android:id="@+id/tv_overview"
+        android:padding="@dimen/size8dp"
+        android:layout_marginBottom="@dimen/size16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1dp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/size8dp"
+            android:layout_marginEnd="@dimen/size8dp"
+            android:layout_marginTop="@dimen/size8dp"
+            android:textSize="@dimen/size20sp"
+            android:text="@string/trailers"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/size8dp"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrailers"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/size8dp"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginBottom="@dimen/size16dp"
+            android:id="@+id/rvReviews"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

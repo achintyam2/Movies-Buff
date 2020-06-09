@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="pop_movies">Pop Movies</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="favourites">Favourites</string>
+    <string name="top_movies">Top Movies</string>
+    <string name="no_data">No data found</string>
+    <string name="error_fetching">Error fetching data</string>
+    <string name="detail_error_message">Movie data not available</string>
+    <string name="movie_detail">Movie Detail</string>
+    <string name="out_of_10">/10</string>
+    <string name="favourite">Favourite</string>
+    <string name="trailers">Trailers</string>
+    <string name="play">play</string>
+</resources>

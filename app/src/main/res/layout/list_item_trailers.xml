@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:src="@drawable/ic_play"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/play" />
+
+    <TextView
+        android:layout_toEndOf="@id/ivPlay"
+        android:paddingStart="@dimen/size8dp"
+        android:textSize="@dimen/size20sp"
+        android:paddingEnd="@dimen/size8dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/size8dp"
+        android:id="@+id/ivName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivPlay"
+        android:paddingLeft="@dimen/size8dp" />
+
+
+</RelativeLayout>
